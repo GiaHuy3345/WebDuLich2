@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form method="post">
+            <input type="text" placeholder="name" id="name" autocomplete="off">
+            <input type="email" placeholder="email" id="email" autocomplete="off">
+            <input type="text" placeholder="subject" id="subject" autocomplete="off">
+            <textarea id="message" placeholder="Message" id="email" cols="30" row="10"></textarea>
+            <button id="btn">Send</button>
+        </form>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(e) {
+        e.preventDefault()
+        var name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var subject = document.getElementById('subject');
+        var message = document.getElementById('message');
+        var body = 'name:' + name + '<br/> email:' + email + '<br/> subject:' + subject + '<br/> message:' + message;
+
+    })
+
+
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "nguyengiahuy3345@gmail.com",
+        Password: "nnyukgijxgnhxftn",
+        To: 'nguyengiahuy3345@gmail.com',
+        From: email,
+        Subject: subject,
+        Body: body,
+    }).then(
+        message => alert(message)
+    );
+</script>
+
+</html>

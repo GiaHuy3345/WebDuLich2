@@ -1,0 +1,307 @@
+h1 {
+    font-size: 14px;
+}
+
+.header-fixed {
+    background-color: #9dc8f3;
+    box-shadow: 0 1px 1px #ccc;
+    padding: 20px 40px;
+    height: 70px;
+    color: #ffffff;
+    box-sizing: border-box;
+    top: -100px;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+}
+
+.header-fixed .header-limiter {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-fixed-placeholder {
+    height: 80px;
+    display: none;
+}
+
+.header-fixed .header-limiter h1 {
+    float: left;
+    font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+    color: #5383d3;
+}
+
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+    font: 16px Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    float: right;
+}
+
+.header-fixed .header-limiter nav a {
+    display: inline-block;
+    padding: 0 5px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover {
+    opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+    color: #608bd2;
+    pointer-events: none;
+    opacity: 1;
+}
+
+
+/* Fixed version of the header */
+
+.header-right {
+    float: right;
+}
+
+.header2 {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+}
+
+.header2 a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header2 a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header2 a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header2 a.active {
+    background-color: dodgerblue;
+    color: rgb(255, 255, 255);
+}
+
+body.fixed .header-fixed {
+    padding: 10px 40px;
+    height: 73px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+    display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+    line-height: 28px;
+    font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+    .header-fixed {
+        padding: 20px 0;
+        height: 75px;
+    }
+    .header-fixed .header-limiter h1 {
+        float: none;
+        margin: -8px 0 10px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1;
+    }
+    .header-fixed .header-limiter nav {
+        line-height: 1;
+        float: none;
+    }
+    .header-fixed .header-limiter nav a {
+        font-size: 13px;
+    }
+    body.fixed .header-fixed {
+        display: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 1500px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mySlides2>.column>.card>a>img {
+    width: 275px;
+    height: 245px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.mySlides2>.column2>.card>a>img {
+    width: 275px;
+    height: 245px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+#slideshow>div {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    right: 10px;
+}
+
+.a1>#slideshow>.mySlides>img {
+    width: 1330px;
+    height: 211px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.856);
+}
+
+.active1 {
+    background-color: white;
+    margin-left: 20px;
+}
+
+.active2 {
+    background-color: white;
+    margin-left: 980px;
+    color: blue
+}
+
+.active>.dot2:hover {
+    background-color: #5383d3;
+}
+
+.align-dot {
+    margin-left: 600px;
+    margin-top: 185px;
+    position: relative;
+}
+
+.active>.dot {
+    background-color: #608bd2;
+}
+
+.a1 {
+    position: absolute;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: max-content;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.card {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.content1 {
+    padding: 2px 16px;
+    height: 45px;
+}
+
+.content2 {
+    padding: 2px 16px;
+    height: 164px;
+}
+
+.column {
+    position: relative;
+    margin-top: 20px;
+    float: left;
+    width: 24%;
+    padding: 10px 0px 0px 49px;
+}
+
+.column2 {
+    margin-top: 56px;
+    float: left;
+    width: 24%;
+    padding: 10px 0px 50px 49px;
+}
+
+.mySlides2 {
+    margin-top: 45px;
+}
+
+.content1>p {
+    font-size: 6px;
+}
+
+.content2>p {
+    font-size: 1px;
+}
